@@ -1,0 +1,18 @@
+Revision history for Perl extension Tk::FileEntry.
+  
+
+2.0  Tue Nov 26 21:41:00 2013
+    - pimped original version by moving it to the skelleton created by h2xs 1.23 with options -b 5.14.3 -XA -n Tk::FileEntry
+    - added Changes file
+    - removed revision control version number stuff
+    - removed print command for arguments
+    - user base instead of direct use of @ISA
+    - moved POD inside the code, documenting all methods
+    - extended documentation
+    - switched from Tk::FileSelect to getOpenFile
+    - removed requires and added it with use pragma (if you are going to use this module, then you are going to use the dependencies as well)
+    - removed known bug POD related to FileSelect issue - it's not used anymore
+    - extended fileentry.t
+
+1.4  Tue Nov 26 21:41:00 2013
+    - version found on CPAN in Tk::ACH dist v0.04 and on gitpan

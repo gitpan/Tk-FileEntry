@@ -1,57 +1,42 @@
-### tests perl/Tks tixish FileEntry widget
-###
-### $Source: t/fileentry.t $ $Revision: 1.2 $
-
-# About the tests:  Nothing realy useful up to now.
-
-require 't/TESTsetup';
-
-use Tk::FileEntry;
 use strict;
+use warnings;
+use Test::More;
+use Tk;
+use Tk::FileEntry;
 
-my $parent = testarea(7);  # In: number of tests.  Out: test area to use
+my $mw = eval { MainWindow->new };
+if (!$mw) { plan( skip_all => "Tk needs a graphical monitor" ); }
 
-$| = 1;
+plan tests => 7;
 my $verbose = 1;
 
-my $w;
 {
-    print "# create FileEntry widget...\n";
-
-    $w = $parent->FileEntry(
+    my $file_entry = $mw->FileEntry(
         #-command => sub {print "callback got |".shift()."|".shift()."|\n"},
     );
-    ok(defined $w);
-    ok(defined $w->pack(-fill=>'x', -side=>'top'));
+    ok(defined $file_entry, 'create FileEntry widget');
+    ok(defined $file_entry->pack(-fill=>'x', -side=>'top'), 'pack FileEntry widget');
     
     
-    print "# option -label widget...\n";
-    ok($w->cget('-label') eq 'File:');
-    $w->configure(-label=>'Do with:');
-    ok($w->cget('-label') eq 'Do with:');
+    ok($file_entry->cget('-label') eq 'File:', 'option -label has default value after creation');
+    $file_entry->configure(-label=>'Do with:');
+    ok($file_entry->cget('-label') eq 'Do with:', 'option -label has custom value after configure');
     
     
     {
-        print "# testing -variable binding ...\n";
+        # testing -variable binding ...
         my $var;
-        $w->configure(-variable => \$var);
+        $file_entry->configure(-variable => \$var);
         
-        print "# insert works for entry subwidget...\n";
-        $w->delete(0, 'end');
-        $w->insert('end','foobar');
-        ok('foobar' eq $var);
+        $file_entry->delete(0, 'end');
+        $file_entry->insert('end','foobar');
+        ok('foobar' eq $var, 'insert works for entry subwidget');
         
-        print "# delete works for entry subwidget...\n";
-        $w->delete(0, 'end');
-        ok($var eq '');
+        $file_entry->delete(0, 'end');
+        ok($var eq '', 'delete works for entry subwidget');
         
-        print "# setting variable(undef) yields no bound variable...\n";
-        $w->variable(undef);
-        my $bound_variable_value = $w->Subwidget('entry')->cget('-textvariable');
-        ok(not defined $bound_variable_value);
+        $file_entry->variable(undef);
+        my $bound_variable_value = $file_entry->Subwidget('entry')->cget('-textvariable');
+        ok((not defined $bound_variable_value), 'setting variable(undef) yields no bound variable');
     }
 }
-
-testend();
-
-__END__

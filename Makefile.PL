@@ -9,7 +9,7 @@ WriteMakefile(
     PREREQ_PM         => {
         # e.g., Module::Name => 1.1
         'ExtUtils::MakeMaker' => '6.64',
-        'Tk' => '402.002',
+        'Tk' => '804.030',
     },
     TEST_REQUIRES => {
         # modules only required for testing

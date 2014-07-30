@@ -1,7 +1,16 @@
 Revision history for Perl extension Tk::FileEntry.
-  
 
-2.0  Tue Nov 26 21:41:00 2013
+2.1  Wed Jul 30 21:25:00 2014
+    - fixed timestamp of changes entry for v2.0
+    - skipped test using MainWindow for computers not having a display
+    - removed self-made test suite and replaced by Test::More
+    - bumped Tk requirement to Tk 804.030 because I can't / don't want to test for an older Tk
+    - removed bugs section from POD because bumping Tk version requirement makes bug notice obsolete
+    - removed METHDOS section from POD as there are no met hods to document
+    - removed duplicate BUGS section
+    - added example to POD
+
+2.0  Tue Jul 29 21:41:00 2014
     - pimped original version by moving it to the skelleton created by h2xs 1.23 with options -b 5.14.3 -XA -n Tk::FileEntry
     - added Changes file
     - removed revision control version number stuff

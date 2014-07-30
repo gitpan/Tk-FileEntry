@@ -7,7 +7,7 @@ use Tk;
 use Tk::widgets qw/ Frame Derived Widget Label Entry Button /;
 use base qw/ Tk::Derived Tk::Frame /;
 
-our $VERSION = '2.0';
+our $VERSION = '2.1';
 
 Construct Tk::Widget 'FileEntry';
 
@@ -71,21 +71,10 @@ Defines the label text. Defaults to I<File:>.
 
 =back
 
-
-=head1 BUGS
-
-If B<FileEntry> is resized to a value smaller than at creation time the
-Openfile Bitmap vanishes.
-
-FileSelection of alpha release Tk800.003 does not work (my fault!).
-So FileEntrys FileSelction dialog will not work with this release.
-
-
-
-
-=head1 METHODS
-
 =cut
+
+
+# METHODS
 
 sub ClassInit {
     my ($class, $mw) = @_;
@@ -193,9 +182,24 @@ Tk::FileEntry has default bindings to allow the execution of the callback when a
 
 
 
+=head1 EXAMPLE
+
+  use strict;
+  use warnings;
+  use Tk;
+  use Tk::FileEntry;
+  
+  my $mw = tkinit();
+  
+  $mw->FileEntry->pack(-expand => 1, -fill => 'x');
+  
+  $mw->MainLoop();
+
+
+
 =head1 BUGS
 
-If B<FileEntry> is resized to a value smaller than at creation time the Openfile Bitmap vanishes.
+None yet. If you find one, please consider creating a bug report, e.g. via L<Github|https://github.com/asb-capfan/Tk-FileEntry/issues>.
 
 
 

@@ -36,7 +36,7 @@
       "runtime" : {
          "requires" : {
             "ExtUtils::MakeMaker" : "6.64",
-            "Tk" : "402.002",
+            "Tk" : "804.030",
             "perl" : "5.014003"
          }
       }
@@ -47,5 +47,5 @@
          "url" : "https://github.com/asb-capfan/Tk-FileEntry"
       }
    },
-   "version" : "2.0"
+   "version" : "2.1"
 }

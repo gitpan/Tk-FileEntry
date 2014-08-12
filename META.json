@@ -4,7 +4,7 @@
       "Alex Becker <c a p f a n _a-t_ g m x write_Adot-here d e - i n v a l l i d>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141170",
    "license" : [
       "perl_5"
    ],
@@ -37,7 +37,7 @@
          "requires" : {
             "ExtUtils::MakeMaker" : "6.64",
             "Tk" : "804.030",
-            "perl" : "5.014003"
+            "perl" : "5.008008"
          }
       }
    },
@@ -47,5 +47,5 @@
          "url" : "https://github.com/asb-capfan/Tk-FileEntry"
       }
    },
-   "version" : "2.1"
+   "version" : "2.2"
 }

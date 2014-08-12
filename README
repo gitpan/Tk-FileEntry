@@ -1,4 +1,4 @@
-Tk-FileEntry version  2.1
+Tk-FileEntry version  2.2
 =========================
 
 This Perl/Tk widget provides an Entry widget with a button. Clicking
@@ -21,7 +21,7 @@ To install this module type the following:
 DEPENDENCIES
 
 This module requires some other modules and libraries.
-See makefile for a detailled list. If you are going to install
+See Makefile.PL for a detailled list. If you are going to install
 via cpan shell or PPM, you don't have to care about.
 
 COPYRIGHT AND LICENCE

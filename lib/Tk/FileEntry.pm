@@ -1,13 +1,13 @@
 package Tk::FileEntry;
 
-use 5.014003;
+use 5.008008;
 use strict;
 use warnings;
 use Tk;
 use Tk::widgets qw/ Frame Derived Widget Label Entry Button /;
 use base qw/ Tk::Derived Tk::Frame /;
 
-our $VERSION = '2.1';
+our $VERSION = '2.2';
 
 Construct Tk::Widget 'FileEntry';
 
@@ -177,7 +177,7 @@ sub variable {
 
 =head1 BINDINGS
 
-Tk::FileEntry has default bindings to allow the execution of the callback when a user presses enter in the entry widget.
+C<Tk::FileEntry> has default bindings to allow the execution of the callback when a user presses enter in the entry widget.
 
 
 

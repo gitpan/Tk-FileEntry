@@ -1,5 +1,8 @@
 Revision history for Perl extension Tk::FileEntry.
 
+2.2  Thu Aug 12 21:21:00 2014
+    - lowered Perl requirement to 5.8.8, related to RT #97845 by Slaven
+
 2.1  Wed Jul 30 21:25:00 2014
     - fixed timestamp of changes entry for v2.0
     - skipped test using MainWindow for computers not having a display

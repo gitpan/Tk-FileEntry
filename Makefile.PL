@@ -1,4 +1,4 @@
-use 5.014003;
+use 5.008008;
 use ExtUtils::MakeMaker;
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
@@ -25,5 +25,5 @@ WriteMakefile(
             repository => 'https://github.com/asb-capfan/Tk-FileEntry',
         },
     },
-    MIN_PERL_VERSION => 5.014003,
+    MIN_PERL_VERSION => 5.008008,
 );
